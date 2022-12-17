@@ -1,0 +1,99 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.imagenForm
+{
+     background-image: url(../img/contacto.jpg);
+     height: 50rem;
+     background-repeat: no-repeat;
+     background-size: cover;
+}
+
+.formulario{
+     background-color: v.$blanco;
+     width: 90%;
+     height: 45rem;
+     margin: auto;
+     margin-top: -25rem;
+     margin-bottom: 10rem;
+     padding: 2rem;
+     @include shadow;     
+}
+
+.contactoform{
+
+     text-align: center;
+     font-size: 2rem;
+     margin-left: 2rem;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+
+}
+
+.campoInput{
+     width: 90%;
+     padding: 1rem;
+     margin: 2rem;
+     border: none;
+     border-bottom: solid v.$negro 1px;
+}
+.campoInput--textarea{
+     resize: none;
+}
+
+#btnform{
+
+     margin: 0 auto;
+     margin-top: 2rem;
+     @include btn;
+     width: 80%;
+     
+}
+
+.error .envio{
+     width: 100%;
+     text-align: center;
+
+     p{
+          margin: auto;
+     }
+}
+
+.error{
+     background-color: red;
+}
+
+.envio{
+     background-color: green;
+}
+
+
+
+@include table{
+     .formulario{
+          background-color: v.$blanco;
+          width: 100%;
+          height: 55rem;
+          margin: auto;
+          margin-top: -25rem;
+          margin-bottom: 10rem;
+          padding: 2rem;
+          @include shadow;     
+     }
+     
+     
+     .error .envio{
+          width: 100%;
+          height: 2rem;
+          margin-top: 2rem;
+          text-align: center;
+     }
+
+     .contactoform{
+          display: block; 
+     }
+
+
+
+}

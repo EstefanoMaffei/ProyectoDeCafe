@@ -1,0 +1,24 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.nosotros_general{
+     @include grid(50%,50%, 2rem);
+     align-items: center;
+     margin: 4rem;
+
+     p{
+          padding: 5rem;
+     }
+}
+
+@include table{
+     .nosotros_general{
+          display: block;
+          margin: 4rem;
+     
+          p{
+               padding: 5rem;
+          }
+     }
+     
+}

@@ -1,0 +1,71 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.header{
+     background-image: url(../img/banner.jpg);
+     height: 70rem;
+     background-repeat: no-repeat;
+     margin: auto
+}
+
+.header__ul {
+     @include m.reset-list; 
+
+     span{
+          font-weight: 300;
+     }
+
+     display: flex;
+     align-items: center;
+     justify-content: space-around;
+     
+}
+
+.header__ul-li{
+     
+     display: flex;
+     align-items: center;
+     justify-content: space-around;
+     
+     a{
+          padding: 5rem;
+     }
+
+}
+
+.headerGeneral{
+     color: v.$blanco;
+     margin: auto;
+     display: flex;
+     align-content: center;
+     justify-content: center;
+     flex-direction: column;
+
+     p{color: v.$blanco;}
+
+}
+
+
+@include table{
+     .header{
+          background-position: center;
+          margin: auto;
+          text-align: center;
+          a{
+               padding: 0;
+          }
+     }
+     
+     .header__ul{
+          
+          flex-direction: column;
+     }
+     .header__ul-li{
+          gap:5rem;
+          li{
+              padding: 2rem;
+          }
+          flex-direction: column;
+     }
+
+}

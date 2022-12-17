@@ -1,0 +1,33 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+
+.footer
+{
+     text-align: center;
+     background-color: v.$negro;
+}
+.footer__ul
+{
+     @include flex(5rem);
+     margin: 0;
+}
+
+@include table{
+
+     .footer__ul
+     {
+          display: flex;
+          flex-direction: column;
+     }
+
+     .footer__ul-li{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          a{
+               padding: 1rem;
+          }
+     }
+}

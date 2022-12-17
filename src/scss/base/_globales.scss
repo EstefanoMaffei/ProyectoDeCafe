@@ -1,0 +1,64 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+html{
+     font-size: 62.5%;
+     box-sizing: border-box;
+}
+
+*, *:before, *:after {box-sizing: inherit;}
+
+body{
+     font-family: v.$fuenteSecundaria;
+     font-size: 1.6rem;
+
+}
+
+p{
+     font-size: 2rem;
+     color: v.$negro;
+}
+
+
+.container{
+
+     width: 70%;
+     margin: 0 auto;
+}
+
+h1,h2,h3,h4,a,p{text-align: center;}
+
+h1,h2,h3{font-family: 'PT Serif', serif; text-transform: uppercase; font-weight: bold;}
+
+h4,a,p{font-weight: 400;}
+
+h1{font-size: 4.8rem; font-weight: bold;}
+h2{font-size: 3rem; font-weight: 700;}
+h3{font-size: 2.8rem;}
+h4{font-size: 2.4rem; }
+a,p{font-size: 2rem;}
+a{text-decoration: none; color: white;}
+img{width: 100%;}
+
+
+
+@include table{
+     .container{
+          margin:auto;
+     }
+
+     h1,h2,h3,h4,a,p{text-align: center;}
+
+     h1,h2{font-family: v.$fuentePrincipal; text-transform: uppercase; font-weight: bold;}
+
+     h3,h4,a,p{font-weight: 400;}
+
+     h1{font-size: 3.8rem; font-weight: bold;}
+     h2{font-size: 3rem; font-weight: 700;}
+     h3{font-size: 2.8rem;}
+     h4{font-size: 2.4rem; }
+     a,p{font-size: 2rem;}
+     a{text-decoration: none; color: white;}
+     img{width: 100%;}
+          
+}

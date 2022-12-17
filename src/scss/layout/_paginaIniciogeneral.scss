@@ -1,0 +1,80 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.principal{
+     @include grid(70%,30%,5rem);
+
+     
+}
+
+.principal_nuestroBlog--general{
+     img{
+          @include shadow;
+     }
+     
+     
+}
+
+.principal_nuestroBlog--texto{
+     
+     line-height: 2;
+     border-bottom: solid v.$negro 1px;
+     margin-bottom: 5rem;
+     
+     a{
+          @include btn
+     }
+     
+}
+
+.principal_cursos-talleres{
+     @include reset-list;
+     
+     li{
+          border-bottom: solid v.$negro 1px;
+          margin-bottom: 5rem;
+          &:last-of-type{
+               border-bottom: none;
+          }
+     }
+     
+     h3{
+          text-transform: uppercase;
+          font-weight: bold;
+          margin-top: 10rem;
+     }
+     a{
+          @include btn
+     }
+}
+
+
+@include table{
+     .container{
+          width: 100%;
+     }
+
+     .principal_nuestroBlog--texto{
+          width: 90%;
+          margin: auto;
+
+          margin-bottom: 5rem;
+     }
+
+     .principal{
+          display: block;
+     }
+
+     .principal_cursos-talleres{
+
+     
+          a{
+               @include btn;
+               width: 90%;
+               margin: auto;
+               margin-bottom: 5rem;
+          }
+     }
+     
+
+}

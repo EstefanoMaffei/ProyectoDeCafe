@@ -1,0 +1,58 @@
+@use 'variables' as v;
+
+@mixin shadow{
+     -webkit-box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.5);
+     -moz-box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.5);
+     box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.5);
+}
+
+@mixin phone {
+     @media (max-width: v.$telefono){
+     
+     @content;
+     }
+}
+@mixin table {
+     @media (max-width: v.$tablet){
+          @content;
+     }
+}
+@mixin pc {
+     @media (max-width: v.$computadora){
+          @content;
+     }
+}
+
+@mixin grid($columnas,$columnasDos, $espaciado) {
+     display: grid;
+     grid-template-columns: $columnas $columnasDos;
+     gap: $espaciado;
+}
+
+@mixin reset-list {
+     margin: 0;
+     padding: 0;
+     list-style: none;
+     
+}
+
+@mixin btn {
+     border: none;
+     display: block;
+     padding: 2rem;
+     width: 100%;
+     font-size: 2rem;
+     margin-bottom: 2rem;
+     text-transform: uppercase;
+     background-color: #784d3c;
+     font-weight: 800;
+     color: white;
+     cursor: pointer;
+}
+
+@mixin flex($espaciado) {
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     gap: $espaciado;
+}

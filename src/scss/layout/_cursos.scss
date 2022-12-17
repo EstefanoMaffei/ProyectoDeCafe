@@ -1,0 +1,42 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.cursos-talleres_general
+{
+     @include grid(50%,50%, 5rem);
+     img{
+          margin: 2rem;
+     }
+}
+.cursos-talleres_texto
+{
+     text-align: center;
+     margin: auto;
+     
+     
+     a{   
+          @include btn;  
+     }
+
+     h3{ 
+          text-transform: uppercase;
+          font-weight: bold;
+     }
+     
+     span{
+          font-weight: bold;
+     }
+}
+
+@include table{
+
+     .cursos-talleres_general
+     {
+     display: block;
+     img{
+          margin: auto;
+          padding: 2rem;
+     }
+     }
+
+}
