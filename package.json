@@ -1,0 +1,28 @@
+{
+  "name": "decafe-tres-sass-y-gulp",
+  "version": "1.0.0",
+  "description": "pagina con SASS y Gulp Practica pagina de CAFE",
+  "main": "index.js",
+  "scripts": {
+    "dev": "gulp dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/EstefanoMaffei?tab=repositories"
+  },
+  "author": "Estefano Maffei",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.8",
+    "cssnano": "^5.1.13",
+    "gulp": "^4.0.2",
+    "gulp-cache": "^1.1.3",
+    "gulp-imagemin": "^8.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-terser-js": "^5.2.2",
+    "gulp-webp": "^4.0.1",
+    "sass": "^1.54.4"
+  }
+}
